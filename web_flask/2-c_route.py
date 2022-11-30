@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Starting a web FLASK application with C"""
 from flask import Flask
+
 app = Flask(__name__)
 
 
@@ -16,7 +17,6 @@ def hbnb():
 
 @app.route('/c/<text>', strict_slashes=False)
 def c_is_fun(text):
-    return 'C %s' % mod_text.replace("_", " ")
+    return 'C %s' % text.replace("_", " ")
 
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000)
+if __name__ == '__main__':
